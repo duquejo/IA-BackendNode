@@ -1,0 +1,28 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "env": {
+    "node": true
+  },
+  "rules": {
+    // TS errors
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-misused-new": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/no-non-null-assertion": "error",
+
+    // Eslint off
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "semi": ["error", "always"],
+    "quotes": [2, "single", { "avoidEscape": true }]
+  }
+}

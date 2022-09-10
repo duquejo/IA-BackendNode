@@ -1,0 +1,30 @@
+service: ia-project-backend-node
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+package:
+  individually: true
+
+custom:
+  webpack:
+    packager: npm
+    includeModules: true
+    excludeFiles: "**/*.test.ts"
+  serverless-offline:
+    httpPort: 8000
+    reloadHandler: true
+
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs16.x
+
+functions:
+  recognitionRuntime:
+    handler: src/handler.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /recognize

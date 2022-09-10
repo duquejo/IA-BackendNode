@@ -5,4 +5,7 @@ module.exports = {
     setupFilesAfterEnv: [
         '<rootDir>/tests/setup.js'
     ],
+    modulePathIgnorePatterns: [
+        '<rootDir>/dist/'
+    ]
 };

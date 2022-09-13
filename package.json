@@ -4,13 +4,14 @@
   "description": "IA Project Tesseract Recognition Lambda",
   "main": "handler.js",
   "scripts": {
-    "build": "serverless webpack --out dist",
+    "build": "serverless package",
     "recognitionLambda": "sls invoke local -f -t recognitionRuntime",
     "start": "sls offline start",
     "test": "jest --watch --detectOpenHandles",
     "test:coverage": "jest --coverage --detectOpenHandles",
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
-    "lint": "eslint --config .eslintrc . --ext .ts"
+    "lint": "eslint --config .eslintrc . --ext .ts",
+    "sls:local": "serverless invoke local -f recognitionRuntime --path api_request.json"
   },
   "keywords": [],
   "author": "duquejo01@gmail.com",

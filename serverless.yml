@@ -10,7 +10,6 @@ package:
 custom:
   webpack:
     packager: npm
-    includeModules: true
     excludeFiles: "**/*.test.ts"
   serverless-offline:
     httpPort: 8000

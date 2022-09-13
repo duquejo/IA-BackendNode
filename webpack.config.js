@@ -8,6 +8,7 @@ module.exports = {
     mode: slsw.lib.webpack.isLocal ? 'development' : 'production',
     entry: slsw.lib.entries,
     target: 'node',
+    stats: 'minimal',
     externalsPresets: {
         node: true
     },
@@ -45,7 +46,7 @@ module.exports = {
             extensions: ['ts']
         })
     ],
-    externals: [ 'aws-sdk', nodeExternals() ],
+    externals: [ nodeExternals() ],
     devtool: slsw.lib.webpack.isLocal ? 'source-map' : 'cheap-source-map',
 };
 

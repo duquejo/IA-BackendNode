@@ -1,5 +1,21 @@
 service: ia-project-backend-node
 
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs16.x
+  apiGateway:
+    apiKeys:
+      - value: authorizationKey
+        description: API Gateway Authorization
+    usagePlan:
+      quota:
+        limit: 5
+        offset: 2
+        period: MONTH
+      throttle:
+        burstLimit: 200
+        rateLimit: 100
 plugins:
   - serverless-webpack
   - serverless-offline
@@ -15,15 +31,12 @@ custom:
     httpPort: 8000
     reloadHandler: true
 
-provider:
-  name: aws
-  region: us-east-1
-  runtime: nodejs16.x
-
 functions:
   recognitionRuntime:
     handler: src/handler.handler
     events:
-      - httpApi:
+      - http:
           method: POST
           path: /recognize
+          private: true
+          

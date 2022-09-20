@@ -5,13 +5,14 @@
   "main": "handler.js",
   "scripts": {
     "build": "serverless package",
-    "recognitionLambda": "sls invoke local -f -t recognitionRuntime",
-    "start": "sls offline start",
+    "recognitionLambda": "serverless invoke local -f -t recognitionRuntime",
+    "start": "serverless offline start",
     "test": "jest --watch --detectOpenHandles",
     "test:coverage": "jest --coverage --detectOpenHandles",
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
     "lint": "eslint --config .eslintrc . --ext .ts",
-    "sls:local": "serverless invoke local -f recognitionRuntime --path api_request.json"
+    "serverless:local": "serverless invoke local -f recognitionRuntime --path api_request.json",
+    "sls-endpoint": "sls reset-all-endpoint-settings"
   },
   "keywords": [],
   "author": "duquejo01@gmail.com",

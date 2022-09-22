@@ -1,10 +1,11 @@
 # IA OCR Service backend
 
 [![node](https://img.shields.io/badge/node-v16.3.X-yellow.svg)](https://nodejs.org)
-[![npm](https://img.shields.io/badge/serverless-v8.3.X-red.svg)](https://www.npmjs.com/)
-[![npm](https://img.shields.io/badge/serverless-v3.22.0-orange.svg)](https://www.serverless.com/)
-[![npm](https://img.shields.io/badge/webpack-v5.74.0-green.svg)](https://webpack.js.org/)
-[![npm](https://img.shields.io/badge/tesseract-v3.0.2-white.svg)](https://tesseract.projectnaptha.com/)
+[![npm](https://img.shields.io/badge/npm-v8.3.X-red.svg)](https://www.npmjs.com/)
+[![Serverless](https://img.shields.io/badge/serverless-v3.22.0-orange.svg)](https://www.serverless.com/)
+[![Webpack](https://img.shields.io/badge/webpack-v5.74.0-green.svg)](https://webpack.js.org/)
+[![Tesseract](https://img.shields.io/badge/tesseract-v3.0.2-white.svg)](https://tesseract.projectnaptha.com/)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=duquejo01_IA-BackendNode&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=duquejo01_IA-BackendNode)
 
 ## Prerequisites
 
@@ -12,7 +13,7 @@ You will need the following things properly installed on your computer.
 
 * [Git](http://git-scm.com/)
 * [Node](https://nodejs.org)
-* [NPM](hhttps://www.npmjs.com/)
+* [NPM](https://www.npmjs.com/)
 
 ## Installation
 

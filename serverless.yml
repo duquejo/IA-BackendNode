@@ -1,5 +1,23 @@
 service: ia-project-backend-node
 
+provider:
+  name: aws
+  region: us-east-1
+  runtime: nodejs16.x
+  apiGateway:
+    disableDefaultEndpoint: true
+    minimumCompressionSize: 1024
+    apiKeys:
+      - value: authorizerKey
+    usagePlan:
+      quota:
+        limit: 5000
+        offset: 2
+        period: MONTH
+      throttle:
+        burstLimit: 200
+        rateLimit: 100
+
 plugins:
   - serverless-webpack
   - serverless-offline
@@ -15,15 +33,22 @@ custom:
     httpPort: 8000
     reloadHandler: true
 
-provider:
-  name: aws
-  region: us-east-1
-  runtime: nodejs16.x
-
 functions:
   recognitionRuntime:
     handler: src/handler.handler
     events:
-      - httpApi:
+      - http:
           method: POST
           path: /recognize
+          cors: 
+            origins: "*"
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - X-Amzn-Trace-Id
+            allowCredentials: false
+          private: true

@@ -24,10 +24,10 @@ module.exports = {
         rules: [
             {
                 test: /\.(tsx?)$/,
-                exclude: /node_modules/,
                 loader: 'ts-loader',
                 exclude: [
                     [
+                        /node_modules/,
                         path.resolve( __dirname, '.serverless' ),
                         path.resolve( __dirname, '.webpack' ),
                     ],

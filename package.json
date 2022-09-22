@@ -11,8 +11,7 @@
     "test:coverage": "jest --coverage --detectOpenHandles",
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
     "lint": "eslint --config .eslintrc . --ext .ts",
-    "serverless:local": "serverless invoke local -f recognitionRuntime --path api_request.json",
-    "sls-endpoint": "sls reset-all-endpoint-settings"
+    "serverless:local": "serverless invoke local -f recognitionRuntime --path api_request.json"
   },
   "keywords": [],
   "author": "duquejo01@gmail.com",

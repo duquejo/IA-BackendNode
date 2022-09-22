@@ -43,7 +43,7 @@ module.exports = {
     plugins: [
         new ForkTsCheckerWebpackPlugin(),
         new ESLintPlugin({
-            extensions: ['ts']
+            extensions: ['tsx']
         })
     ],
     externals: [ nodeExternals() ],

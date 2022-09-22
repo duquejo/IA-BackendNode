@@ -5,17 +5,19 @@ provider:
   region: us-east-1
   runtime: nodejs16.x
   apiGateway:
+    disableDefaultEndpoint: true
+    minimumCompressionSize: 1024
     apiKeys:
-      - value: authorizationKey
-        description: API Gateway Authorization
+      - value: authorizerKey
     usagePlan:
       quota:
-        limit: 5
+        limit: 5000
         offset: 2
         period: MONTH
       throttle:
         burstLimit: 200
         rateLimit: 100
+
 plugins:
   - serverless-webpack
   - serverless-offline
@@ -38,5 +40,15 @@ functions:
       - http:
           method: POST
           path: /recognize
+          cors: 
+            origins: "*"
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+              - X-Amzn-Trace-Id
+            allowCredentials: false
           private: true
-          

@@ -11,7 +11,9 @@
     "test:coverage": "jest --coverage --detectOpenHandles",
     "prettier-format": "prettier --config .prettierrc src/**/*.ts --write",
     "lint": "eslint --config .eslintrc . --ext .ts",
-    "serverless:local": "serverless invoke local -f recognitionRuntime --path api_request.json"
+    "serverless:local": "serverless invoke local -f recognitionRuntime --path api_request.json",
+    "serverless:deploy": "serverless deploy",
+    "serverless:remove": "serverless remove"
   },
   "keywords": [],
   "author": "duquejo01@gmail.com",

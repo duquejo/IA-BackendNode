@@ -8,7 +8,7 @@ provider:
     disableDefaultEndpoint: true
     minimumCompressionSize: 1024
     apiKeys:
-      - value: authorizerKey
+      - value: g6zLfyQ3X6W2XuZzk4423pywV2uchpbKbHTMWNYEQsytAfnLPIXR6cwNxeGhQeyE
     usagePlan:
       quota:
         limit: 5000

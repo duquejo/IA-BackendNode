@@ -1,5 +1,7 @@
 # IA OCR Service backend
 
+_Link to [Frontend repository URL](https://github.com/duquejo/IA-Project-Frontend)_
+
 [![node](https://img.shields.io/badge/node-v16.3.X-yellow.svg)](https://nodejs.org)
 [![npm](https://img.shields.io/badge/npm-v8.3.X-red.svg)](https://www.npmjs.com/)
 [![Serverless](https://img.shields.io/badge/serverless-v3.22.0-orange.svg)](https://www.serverless.com/)
